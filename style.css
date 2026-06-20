@@ -613,6 +613,63 @@ footer {
     box-shadow: 0 3px 10px rgba(255, 42, 42, 0.2);
 }
 
+/* RESET GLOBAL DE LINKS (Para sumir com o roxo e o sublinhado do HTML do mal) */
+a, a:sticky, a:visited, a:hover, a:active {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+/* ==========================================================================
+   BOTÃO DOS PROJETOS - ESTILO DARK/RED SEGURO
+   ========================================================================== */
+
+.btn-projeto {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 14px 24px !important;
+    
+    /* Cores padrão do botão (Fundo escuro, texto cinza claro, borda vermelha sutil) */
+    background-color: #161616 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #ff2a2a !important;
+    border-radius: 8px !important;
+    
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Garante que MESMO VISITADO ele mantenha o visual cinza com borda vermelha */
+.btn-projeto:visited {
+    background-color: #161616 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #ff2a2a !important;
+}
+
+/* EFEITO HOVER (Quando passa o mouse no card ou direto no botão) */
+.card-portfolio:hover .btn-projeto,
+.btn-projeto:hover {
+    background-color: #ff2a2a !important;
+    border-color: #ff2a2a !important;
+    color: #ffffff !important; /* Aqui sim fica branco, mas só no topo do vermelho quando ativa o hover */
+    box-shadow: 0 6px 20px rgba(255, 42, 42, 0.4) !important;
+}
+
+/* Animação da seta no hover */
+.card-portfolio:hover .btn-projeto i,
+.btn-projeto:hover i {
+    transform: translateX(6px) !important;
+}
+
+/* Clique físico */
+.btn-projeto:active {
+    transform: translateY(2px) !important;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .portfolio-container {

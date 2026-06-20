@@ -567,6 +567,52 @@ footer {
     box-shadow: 0 3px 10px rgba(255, 42, 42, 0.2);
 }
 
+/* BOTÃO DE IR PARA OS PROJETOS (CORRIGIDO) */
+.btn-projeto, 
+.btn-projeto:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 24px;
+    background-color: rgba(255, 255, 255, 0.02);
+    color: var(--texto-claro) !important; /* Força a cor branca mesmo após clicado */
+    text-decoration: none !important; /* Remove qualquer sublinhado padrão */
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.btn-projeto i {
+    font-size: 0.9rem;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Efeito quando passa o mouse no card ou direto no botão */
+.card-portfolio:hover .btn-projeto,
+.btn-projeto:hover {
+    background-color: var(--cor-primaria) !important;
+    border-color: var(--cor-primaria) !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 20px rgba(255, 42, 42, 0.4);
+}
+
+/* Faz a seta correr para o lado no hover */
+.card-portfolio:hover .btn-projeto i,
+.btn-projeto:hover i {
+    transform: translateX(6px);
+}
+
+/* Efeito de clique físico */
+.btn-projeto:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 10px rgba(255, 42, 42, 0.2);
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .portfolio-container {
